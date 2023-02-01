@@ -1,0 +1,1 @@
+0 1 * * * /Atividade 1/bkp-bases.sh 1>> /var/log/mysqlbackup.log 2>>/var/log/mysqlbackup-error.log
