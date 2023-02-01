@@ -1,0 +1,76 @@
+use loja
+
+db.funcionarios.insertMany(
+{
+id: 1,
+nome: "Sílvio Cortês",
+telefone: 9978981234,
+cpf: 84537768061,
+usuario: {id: 4, login: "silvioc", senha: "sil123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 2, descricao: "Vendedor", salario: 2500, comissao: 10}
+},
+{
+id: 2,
+nome: "Amaro Valadão",
+telefone: 9975341234,
+cpf: 03074142057,
+usuario: {id: 5, login: "amarov", senha: "ama123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 2, descricao: "Vendedor", salario: 2500, comissao: 10}
+},
+{
+id: 3,
+nome: "Marcos Valadão",
+telefone: 9975347897,
+cpf: 40967947081,
+usuario: {id: 6, login: "marcosv", senha: "mar123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 2, descricao: "Vendedor", salario: 2500, comissao: 10}
+},
+{
+id: 4,
+nome: "Domingas Souza Sá",
+telefone: 9975341234,
+cpf: 51077408048,
+usuario: {id: 7, login: "domingass", senha: "dom123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 4, descricao: "Supervisor de Vendas", salario: 2800, comissao: 10}
+},
+{
+id: 5,
+nome: "Marina Frazão",
+telefone: 9975891854,
+cpf: 21788502000,
+usuario: {id: 8, login: "marinaf", senha: "mar123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 1, descricao: "Gerente", salario: 5000, comissao: 0}
+},
+{
+id: 6,
+nome: "Joana Freitas",
+telefone: 9975897534,
+cpf: 85690938025,
+usuario: {id: 9, login: "joanaf", senha: "joa123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 3, descricao: "Serviços Gerais", salario: 1500, comissao: 0}
+},
+{
+id: 7,
+nome: "Aparício Dias",
+telefone: 9975147884,
+cpf: 14131448025,
+usuario: {id: 10, login: "apariciod", senha: "apa123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 3, descricao: "Serviços Gerais", salario: 1500, comissao: 0}
+},
+{
+id: 8,
+nome: "Filomena da Luz",
+telefone: 9975847884,
+cpf: 19641782070,
+usuario: {id: 11, login: "filomenal", senha: "fil123", ultimo_login: "2022-01-10 10:00:00"},
+cargo: {id: 5, descricao: "Estoquista", salario: 2000, comissao: 0}
+}
+)
+
+db.funcionarios.updateOne(
+{"id": 5},
+{$set: {"nome": "Marina Frazão da Cunha"}}
+);
+
+db.funcionarios.find({"nome": "Marina Frazão da Cunha"})
+db.funcionarios.find({"cargo.id": 2})
