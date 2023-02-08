@@ -5,16 +5,20 @@ package employees;
 
 public abstract class Employee {
     private static int nextId = 0;
-    protected final int id;
+    protected final int ID;
     protected String name;
     protected final String CPF;
+     protected String contractType;
+    protected String department;
     protected Addres addres;
-    protected String contractType;
+   
     
-    Employee(String name, String cpf, Addres addres){
-        this.id = nextId++;
+    Employee(String name, String cpf, int contractType, String department, Addres addres){
+        this.ID = nextId++;
         this.name = name;
         this.CPF = cpf;
+        this.contractType = contractType == 1 ? "monthly" : "hourly";
+        this.department = department;
         this.addres = addres;
     }
     
@@ -26,8 +30,8 @@ public abstract class Employee {
     
     // Getters.
     
-    public String getId(){
-        return Integer.toString(id);
+    public int getId(){
+        return ID;
     }
     
     public String getName(){
@@ -38,12 +42,16 @@ public abstract class Employee {
         return CPF;
     }
     
+    public String getDepartment(){
+        return department;
+    }
+    
     public Addres getAddres(){
         return addres;
     }
     
     public String getContractType(){        
-        return contractType.equals("hourly") ? "Horista" : "Assalariado";
+        return contractType;
     }
     
     public float getValuePerHour(){

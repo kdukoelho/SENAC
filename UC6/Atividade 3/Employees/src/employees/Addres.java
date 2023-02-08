@@ -37,7 +37,7 @@ public class Addres {
     }
     
     public String getBuildedAddres(){
-        String buildedString = String.format("%s - %s, %s %s %s", addres[1], addres[0], addres[2], addres[3], addres[4]);
+        String buildedString = String.format("%s - %s, %s, %s, N° %s", addres[1], addres[0], addres[2], addres[3], addres[4]);
         return buildedString;
     }
 }

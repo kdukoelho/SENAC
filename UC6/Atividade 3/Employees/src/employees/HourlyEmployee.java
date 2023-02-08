@@ -4,11 +4,11 @@
 package employees;
 
 public class HourlyEmployee extends Employee {
-    private float workedHours;
-    private float valuePerHour;
+    private final float workedHours;
+    private final float valuePerHour;
     
-    HourlyEmployee(String name, String cpf, Addres addres, float workedHours, float valuePerHour){
-        super(name, cpf, addres);
+    HourlyEmployee(String name, String cpf, int contractType, String department, Addres addres, float workedHours, float valuePerHour){
+        super(name, cpf, contractType, department, addres);
         this.workedHours = workedHours;
         this.valuePerHour = valuePerHour;
         this.contractType = "hourly";
