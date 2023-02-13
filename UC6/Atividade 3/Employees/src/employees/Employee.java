@@ -8,7 +8,7 @@ public abstract class Employee {
     protected final int ID;
     protected String name;
     protected final String CPF;
-     protected String contractType;
+    protected String contractType;
     protected String department;
     protected Addres addres;
    

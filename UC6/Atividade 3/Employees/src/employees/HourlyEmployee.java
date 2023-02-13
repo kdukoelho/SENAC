@@ -20,8 +20,8 @@ public class HourlyEmployee extends Employee {
             return valuePerHour * workedHours;
         }
         else{
-            float increaseValue = (valuePerHour * workedHours) * (increasePercentage / 100);
-            return (valuePerHour * workedHours) + increaseValue;
+            float increaseValue = (valuePerHour * workedHours) * increasePercentage / 100;
+            return valuePerHour * workedHours + increaseValue;
         }
     }
     

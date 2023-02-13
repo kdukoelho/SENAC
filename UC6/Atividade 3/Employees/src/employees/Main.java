@@ -8,7 +8,9 @@ import java.util.List;
 
 public class Main {          
     public static void main(String[] args) {
-         printEmployees(buildEmployeesList());
+        List<Employee> employeesList = buildEmployeesList();
+        printEmployeesData(employeesList, 0);
+        printEmployeesData(employeesList, getSalaryIncrease());
          
     }
     
@@ -92,16 +94,15 @@ public class Main {
         return userResponse.equals("S");
     }
     
-    private static void printEmployees(List<Employee> employeeArray){
-        int salaryIncrease = getSalaryIncrease();
-        System.out.println();
+    private static void printEmployeesData(List<Employee> employeeArray, int salaryIncrease){
+        if (salaryIncrease > 0) { System.out.println("\nINFORMANDO DADOS COM AUMENTO APLICADO NOS SALARIOS"); }
         for (Employee employee : employeeArray){
             String salaryString;
             if (employee.getContractType().equals("hourly")){
                 salaryString = String.format("""
                                              Valor da hora: %s
                                              Horas trabalhadas: %s
-                                             Salario SE trabalhado 1 mes(C/ aumento aplicado): %s""", employee.getValuePerHour(), employee.getWorkedHours(), employee.calculateSalary(salaryIncrease));
+                                             Salario SE trabalhado 1 mes: %s""", employee.getValuePerHour(), employee.getWorkedHours(), employee.calculateSalary(salaryIncrease));
             }
             else{
                 salaryString = String.format("Salario: %s", employee.calculateSalary(salaryIncrease));
