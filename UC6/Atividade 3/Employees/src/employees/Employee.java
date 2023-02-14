@@ -24,9 +24,7 @@ public abstract class Employee {
     
     // Functions.
     
-     public float calculateSalary(int increasePercentage){
-         return 0;
-     }
+     public abstract float calculateSalary(int increasePercentage);
     
     // Getters.
     
@@ -55,10 +53,10 @@ public abstract class Employee {
     }
     
     public float getValuePerHour(){
-        return 0; 
+        return 0;
     }
     
-    public float getWorkedHours(){
+    public float getWorkedHours() {
         return 0;
-    }  
+    }
 }
