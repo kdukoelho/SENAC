@@ -29,7 +29,7 @@ public class Ipi extends Tax {
         this.fare = UserInput.Float();
         System.out.print("Valor do seguro: ");
         this.insurance = UserInput.Float();
-        System.out.println("Outros valores (DIGITE '0' P/ PARAR): ");
+        System.out.println("Outras despesas (DIGITE '0' P/ PARAR): ");
         while (true) {
             System.out.print("> ");
             Float value = UserInput.Float();

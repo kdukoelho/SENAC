@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author github.com/kdukoelho
  */
-public class Payment {
+public class Payments {
     private String corpName;
     private List<Tax> taxesToBePaidList = new ArrayList<>();
     

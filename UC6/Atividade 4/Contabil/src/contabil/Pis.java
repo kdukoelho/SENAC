@@ -5,7 +5,6 @@ package contabil;
  * @author github.com/kdukoelho
  */
 public class Pis extends Tax{
-    private float aliquot;
     private float debt;
     private float credit;
     

@@ -1,7 +1,7 @@
  /**
   * @author kdukoelho
   */
-package employees;
+package contabil;
 
 import java.util.Scanner;
 
