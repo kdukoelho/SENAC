@@ -1,10 +1,10 @@
- /**
-  * @author kdukoelho
-  */
 package employees;
 
 import java.util.Scanner;
 
+ /**
+  * @author github.com/kdukoelho
+  */
 public class UserInput {
     
     public static String String(){
